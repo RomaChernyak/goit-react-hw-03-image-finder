@@ -16,7 +16,7 @@ export class ImageGallery extends Component {
     };
 
     showErrorMessage = () => {
-        Notiflix.Notify.failure("Unfortunately, there are no more photos that match your search query!");
+        Notiflix.Notify.failure("Unfortunately, there are no more photos that match your search query! You've reached the last page with search results.");
     };
 
     onFindMore = () => {
