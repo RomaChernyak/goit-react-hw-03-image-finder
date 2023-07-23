@@ -54,8 +54,9 @@ export class ImageGallery extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         const { page } = this.state;
+        const { searchQuery } = this.props;
         
-        if (prevProps.searchQuery !== this.props.searchQuery) {
+        if (prevProps.searchQuery !== searchQuery) {
             this.setState({
                 isLoading: true,
                 imageList: null,
@@ -64,7 +65,7 @@ export class ImageGallery extends Component {
             });
 
             setTimeout(() => {
-                fetchGalleryImg(this.props.searchQuery, page)
+                fetchGalleryImg(searchQuery, page)
                 .then(({ hits }) => {
                     if (hits.length === 0) {
                         this.showErrorMessage();
