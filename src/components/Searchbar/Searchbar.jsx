@@ -22,23 +22,13 @@ export class Searchbar extends Component {
         if (!regex.test(value)) {
             return Notiflix.Notify.failure("The input value should contain only letters and digits!");
         }
-
+        
         value === ''
             ? Notiflix.Notify.failure("Please try again. Enter a search term in the search field.")
             : handleSubmit(value.toLowerCase().trim());
         
         evt.currentTarget.reset();
     };
-
-    // handleSubmit = event => {
-    //     event.preventDefault();
-    //     if (this.state.searchQuery.trim() === '') {
-    //     toast.error('Enter a keyword');
-    //     return;
-    //     }
-    //     this.props.onSubmit(this.state.searchQuery);
-    //     this.setState({ searchQuery: '' });
-    // };
 
     render() {
         return (

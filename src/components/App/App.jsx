@@ -6,7 +6,7 @@ export class App extends Component {
   state = {
     searchQuery: '',
     isModalVisible: false,
-    modalImg: '',
+    modalImage: '',
   };
 
   handleSubmit = searchQuery => {
@@ -16,7 +16,7 @@ export class App extends Component {
   showModal = largeImageURL => {
     this.setState({
       isModalVisible: true,
-      modalImg: largeImageURL,
+      modalImage: largeImageURL,
     });
   };
 
@@ -25,7 +25,7 @@ export class App extends Component {
   };
 
   render() {
-    const { searchQuery, isModalVisible, modalImg } = this.state;
+    const { searchQuery, isModalVisible, modalImage } = this.state;
     
     return (
       <div className={css.app}>
@@ -38,7 +38,7 @@ export class App extends Component {
         {isModalVisible && (
           <Modal
             closeModal={this.closeModal}
-            modalImage={modalImg}
+            modalImage={modalImage}
           />
         )}
       </div>

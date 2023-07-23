@@ -10,9 +10,5 @@ export function fetchGalleryImg(searchQuery, page) {
             return response.json();
         }
         return Promise.reject(new Error(response.status));
-            // if (!response.ok) {
-            //     throw new Error(response.status);
-            // }
-        // return response.json();
     });
 }
