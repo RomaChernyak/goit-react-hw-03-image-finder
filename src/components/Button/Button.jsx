@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import css from "./Button.module.css";
 
-export const Button = ({ onFindMore, text }) => {
+export const Button = ({ onLoadMore, text }) => {
     return (
         <button
             className={css.button_loadmore}
-            onClick={onFindMore}>
+            onClick={onLoadMore}>
             {text}
         </button>
     )
 }
 
 Button.propTypes = {
-    onFindMore: PropTypes.func,
+    onLoadMore: PropTypes.func,
     text: PropTypes.string.isRequired,
 };
